@@ -11,11 +11,30 @@
 
   <title>Hello, world!</title>
   <style>
-    .bg {
-      background-image: url("content/flock-of-birds-917494.jpg");
-      height: 100%;
-      background-repeat: no-repeat;
-      background-size: cover;
+    img.bg {
+      /* Set rules to fill background */
+      min-height: 100%;
+      min-width: 1024px;
+
+      /* Set up proportionate scaling */
+      width: 100%;
+      height: auto;
+
+      /* Set up positioning */
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: -10;
+    }
+
+    @media screen and (max-width: 1024px) {
+
+      /* Specific to this particular image */
+      img.bg {
+        left: 50%;
+        margin-left: -512px;
+        /* 50% */
+      }
     }
 
     #center-container {
@@ -25,7 +44,8 @@
   </style>
 </head>
 
-<body class="bg">
+<body>
+  <img src="content/flock-of-birds-917494.jpg" class="bg">
   <div class="jumbotron jumbotron-fluid">
     <div class="container">
       <h1 class="display-4">Babak Akbari</h1>
@@ -36,17 +56,17 @@
     <div class="row">
       <div class="col-sm">
         <a href="https://www.linkedin.com/in/babak-akbari-487102193/">
-          <img src="content/linkedin-ios.png" width="200px" height="200px"></img>
+          <img src="content/linkedin-ios.png" width="200px" height="200px">
         </a>
       </div>
       <div class="col-sm">
         <a href="https://twitter.com/babakakb">
-          <img src="content/twitter-ios.png" width="200px" height="200px"></img>
+          <img src="content/twitter-ios.png" width="200px" height="200px">
         </a>
       </div>
       <div class="col-sm">
         <a href="https://github.com/BabakAkbari">
-          <img src="content/github.png" width="200px" height="200px"></img>
+          <img src="content/github.png" width="200px" height="200px">
         </a>
       </div>
     </div>
